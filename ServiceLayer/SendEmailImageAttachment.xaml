@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>996,1699</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>945,1101</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendEmailImageAttachment_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,7 +105,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Sends an email with image attachment to every &quot;Coleg&quot; that has a dog/cat." DisplayName="SendEmailImageAttachment" sap:VirtualizedContainerService.HintSize="512,1634" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Sends an email with image attachment to every &quot;Coleg&quot; that has a dog/cat." DisplayName="SendEmailImageAttachment" sap:VirtualizedContainerService.HintSize="416,1036" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new list(of string)]" Name="attachmentsList" />
       <Variable x:TypeArguments="x:Boolean" Name="CatImageBool" />
@@ -117,10 +117,10 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Send Image via Email" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Sending images via email..&quot;]" />
-    <ui:FileExistsX DisplayName="Cat Image Exists" Exists="[CatImageBool]" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="FileExistsX_3" Path="[in_Config(&quot;PathCatImage&quot;).ToString]" />
-    <ui:FileExistsX DisplayName="Dog Image Exists" Exists="[DogImageBool]" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="FileExistsX_4" Path="[in_Config(&quot;PathDogImage&quot;).ToString]" />
-    <If Condition="[CatImageBool]" DisplayName="If Cat Image Downloaded" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_5">
+    <ui:LogMessage DisplayName="Log Message - Send Image via Email" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Sending images via email..&quot;]" />
+    <ui:FileExistsX DisplayName="Cat Image Exists" Exists="[CatImageBool]" sap:VirtualizedContainerService.HintSize="354,165" sap2010:WorkflowViewState.IdRef="FileExistsX_3" Path="[in_Config(&quot;PathCatImage&quot;).ToString]" />
+    <ui:FileExistsX DisplayName="Dog Image Exists" Exists="[DogImageBool]" sap:VirtualizedContainerService.HintSize="354,165" sap2010:WorkflowViewState.IdRef="FileExistsX_4" Path="[in_Config(&quot;PathDogImage&quot;).ToString]" />
+    <If Condition="[CatImageBool]" DisplayName="If Cat Image Downloaded" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -148,7 +148,13 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[DogImageBool]" DisplayName="If Dog Image Downloaded" sap:VirtualizedContainerService.HintSize="450,666" sap2010:WorkflowViewState.IdRef="If_6">
+    <If Condition="[DogImageBool]" DisplayName="If Dog Image Downloaded" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,244" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
@@ -170,7 +176,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[in_Config(&quot;OutlookInputEmailAddress&quot;).ToString]" AttachmentsCollection="[attachmentsList]" Body="[in_Config(&quot;SendImageMessage&quot;).ToString]" DisplayName="Send Mail Message with Images" sap:VirtualizedContainerService.HintSize="450,184" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_TransactionItem.SpecificContent(&quot;Name&quot;).ToString + &quot;: images with your pet.&quot;]" To="darius.dangi@fwfcompany.com">
+    <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[in_Config(&quot;OutlookInputEmailAddress&quot;).ToString]" AttachmentsCollection="[attachmentsList]" Body="[in_Config(&quot;SendImageMessage&quot;).ToString]" DisplayName="Send Mail Message with Images" sap:VirtualizedContainerService.HintSize="354,184" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_TransactionItem.SpecificContent(&quot;Name&quot;).ToString + &quot;: images with your pet, &quot; + in_TransactionItem.SpecificContent(&quot;Animal &quot;).ToString]" To="[in_Config(&quot;OutlookInputEmailAddress&quot;).ToString]">
       <ui:SendOutlookMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </ui:SendOutlookMail.Files>
@@ -181,7 +187,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SendOutlookMail>
-    <If Condition="[CatImageBool]" DisplayName="If Cat Image Exists" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[CatImageBool]" DisplayName="If Cat Image Exists" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -210,7 +216,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[DogImageBool]" DisplayName="If Dog Image Exists" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[DogImageBool]" DisplayName="If Dog Image Exists" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
