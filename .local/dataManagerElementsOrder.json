@@ -58,7 +58,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "ServiceLayer/SendEmailImageAttachment.xaml",
+      "Path": "ServiceLayer/Outlook_SendEmailImageAttachment.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "DogImageBool&Sequence_1",
@@ -222,7 +222,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "ServiceLayer/SendOutputReport.xaml",
+      "Path": "ServiceLayer/Outlook_SendOutputReport.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
